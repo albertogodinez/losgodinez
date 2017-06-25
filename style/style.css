@@ -8,6 +8,10 @@ body {
   color: #161616;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
+/*
+a {
+  text-decoration: underline;
+}*/
 
 .container {
   width: 1280px;
@@ -164,6 +168,7 @@ body {
   margin: 0;
   padding: 0;
 }
+/*
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
     top: 15px;
@@ -274,4 +279,202 @@ body {
 #main .container_wrap .container, #main .container_wrap .content{
     width: 100% !important;
     margin: 0 !important;
+}
+
+/* TEMP TEMP TEMP */
+/* Bootstrap carousel styles */
+/* line 838, ../sass/screen.scss */
+
+/* line 106, icn/*.png 
+.icn-sprite, .icn-back, .icn-bridal-party, .icn-history-close, .icn-history-more, .icn-indicator-off, .icn-indicator-on, .icn-live-map, .icn-slideshow-left, .icn-slideshow-right {
+  background: url("../img/icn-right.png") no-repeat;
+}
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icn-slideshow-left {
+  height: 100px;
+  width: 55px;
+  font-size: 16px; 
+  font-size: 20vw;
+}
+
+/* line 60, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icn-slideshow-right {
+  height: 100px;
+  width: 55px;
+  font-size: 16px; 
+  font-size: 20vw;
+}
+
+.carousel {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* line 843, ../sass/screen.scss */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 849, ../sass/screen.scss */
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+
+/* line 859, ../sass/screen.scss */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  line-height: 1;
+}
+
+/* line 866, ../sass/screen.scss */
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+/* line 870, ../sass/screen.scss */
+.carousel-inner > .active {
+  left: 0;
+}
+
+/* line 875, ../sass/screen.scss */
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 881, ../sass/screen.scss */
+.carousel-inner > .next {
+  left: 100%;
+}
+
+/* line 885, ../sass/screen.scss */
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+/* line 890, ../sass/screen.scss */
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+/* line 894, ../sass/screen.scss */
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+/* line 898, ../sass/screen.scss */
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+
+/* line 902, ../sass/screen.scss */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  margin-top: -50px;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+ text-indent: 0px;
+  /*background-color: red;*/
+  z-index: 99;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 911, ../sass/screen.scss */
+.carousel-control.right {
+  right: 100px;
+  left: auto;
+}
+
+/* line 911, ../sass/screen.scss */
+.carousel-control.left {
+  left: 100px;
+  right: auto;
+}
+/* line 917, ../sass/screen.scss */
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  filter: alpha(opacity=90);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* line 960, ../sass/screen.scss */
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  color: #ffffff;
+}
+
+/* line 965, ../sass/screen.scss */
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+/* line 969, ../sass/screen.scss */
+.carousel-caption p {
+  margin-bottom: 0;
+}
+
+
+/* line 923, ../sass/screen.scss */
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 932, ../sass/screen.scss */
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* line 945, ../sass/screen.scss */
+.carousel-indicators .active {
+  background-color: #fff;
 }

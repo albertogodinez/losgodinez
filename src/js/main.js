@@ -1,4 +1,31 @@
-/*ANIMATION_SPEED = 400;
+
+    var viewInfoButton = document.getElementsByClassName("history-more");
+    var info = document.getElementsByClassName("info");
+    $('.carousel').carousel({
+      interval: false
+    });
+
+    function animateInfo(action, i){
+      if(action === "show"){
+        console.log("called show");
+        info[i].classList.remove('hide-info');
+        info[i].classList.add('show-info');
+      }
+      else if(action === "hide"){
+        console.log("called hide");
+        info[i].classList.remove('show-info');
+        info[i].classList.add('hide-info');
+
+        setTimeout(function(){
+          info[i].classList.remove('hide-info');
+        },2000);
+      }
+    };
+    // Init Skrollr
+    var s = skrollr.init();
+    s.refresh($('.homeSlide'));
+
+ANIMATION_SPEED = 400;
 
 $.easing.def = "easeInOutCubic";
 
@@ -33,35 +60,27 @@ $(function(){
 		interval: false
     });
 
-    /*$('#gallery')
+    $('#gallery')
     	.on('click', function(){
     		lazyLoad('#gallery');
     	});
-*//*
+
     $('#our-story')
     	.on('click', function(){
     		lazyLoad('#our-story');
-    	})
-		.on('click', '.icn-history-more', function(e){
-			e.preventDefault();
-			$(e.target).next().animate({bottom: '0px'}, ANIMATION_SPEED);
-		})
-		.on('click', '.icn-history-close', function(e){
-			e.preventDefault();
-			$(e.target).parent().animate({bottom: '-770px'}, ANIMATION_SPEED);
-		});
+    	});
 
-	/*$('#festivities')
+	$('#festivities')
 		.on('click', function(){
     		lazyLoad('#festivities');
     	})
-		.on('click', '.icn-live-map', function(e){
+		.on('click', '.live-map', function(e){
 			e.preventDefault();
-			$('#festivities').children().not('iframe, .icn-history-close').fadeOut();
+			$('#festivities').children().not('iframe, .history-close').fadeOut();
 		})
-		.on('click', '.icn-history-close', function(e){
+		.on('click', '.history-close', function(e){
 			e.preventDefault();
-			$('#festivities').children().not('iframe, .icn-history-close').fadeIn();
+			$('#festivities').children().not('iframe, .history-close').fadeIn();
 		});
 
 	var $bridalParty = $('#bridal-party');
@@ -76,11 +95,11 @@ $(function(){
 			e.preventDefault();
 			$('.bridesmaides', $bridalParty).show();
 			$('.groomsmen', $bridalParty).hide();
-			$('.icn-bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
+			$('.bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
 				$(this).animate({ bottom: '-338px' }, ANIMATION_SPEED, function(){
 					$('.cover-left', $bridalParty).animate({ left: '-650px' }, ANIMATION_SPEED);
 					$('.cover-right', $bridalParty).animate({ right: '-650px' }, ANIMATION_SPEED);
-					$('.icn-back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
+					$('.back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
 				});
 			});
 		})
@@ -100,21 +119,21 @@ $(function(){
 			e.preventDefault();
 			$('.bridesmaides', $bridalParty).hide();
 			$('.groomsmen', $bridalParty).show();
-			$('.icn-bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
+			$('.bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
 				$(this).animate({ bottom: '-338px' }, ANIMATION_SPEED, function(){
 					$('.cover-left', $bridalParty).animate({ left: '-650px' }, ANIMATION_SPEED);
 					$('.cover-right', $bridalParty).animate({ right: '-650px' }, ANIMATION_SPEED);
-					$('.icn-back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
+					$('.back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
 				});
 			});
 		})
-		.on('click', '.icn-back', function(e){
+		.on('click', '.back', function(e){
 			e.preventDefault();
-			$('.icn-back', $bridalParty).animate({ bottom: '-120px' }, ANIMATION_SPEED, function(){
+			$('.back', $bridalParty).animate({ bottom: '-120px' }, ANIMATION_SPEED, function(){
 				$(this).animate({ bottom: '-226px' }, ANIMATION_SPEED, function(){
 					$('.cover-left', $bridalParty).animate({ left: '0px' }, ANIMATION_SPEED);
 					$('.cover-right', $bridalParty).animate({ right: '0px' }, ANIMATION_SPEED);
-					$('.icn-bridal-party', $bridalParty).animate({ bottom: '-150px' }, ANIMATION_SPEED, function(){
+					$('.bridal-party', $bridalParty).animate({ bottom: '-150px' }, ANIMATION_SPEED, function(){
 						$('.bridesmaides, .groomsmen', $bridalParty).hide();
 					});
 				});
@@ -153,8 +172,7 @@ $(function(){
 			$link.addClass('active');
 			$($link.attr('href')).animate({ 'margin-left': '-303px'}, ANIMATION_SPEED);
 		});
-*/
-/*	$("img[data-original]").lazyload();
+	$("img[data-original]").lazyload();
 });
 
 function lazyLoad(parent) {
@@ -181,4 +199,4 @@ function bgLazyLoad(el){
 				$div.removeAttr('data-bg');
 			});
     }
-}*/
+}
