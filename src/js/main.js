@@ -4,6 +4,10 @@
     $('.carousel').carousel({
       interval: false
     });
+   
+	function weddingPartyInfo(name, title, index){
+		console.log('name: ' + name + "title:   " + title + '   index: ' + index);
+	}
 
     function animateInfo(action, i){
       if(action === "show"){
