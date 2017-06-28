@@ -497,17 +497,41 @@ a {
   width:100%;
   top: 769px;
   left: 0;
-  height: 768px;
+  height: 900px;
   z-index: 2;
   background:	#E7DFDD;
   text-align: center;
   margin-left: -5px;
 }
 
-#wedding-party .slider {
-  top: 10%;
+#wedding-party h2{
+  color: #540b21;
+  font-size: 34px;
 }
 
+ .Collage{
+    /* 
+     * Change this to set the spacing of the images in the grid
+     */
+    padding:5px;
+  }
+
+.Collage img{
+    opacity:0;
+    border-radius: 6px;
+    /* 
+    * Change this to try different borders
+    */
+    border:2px solid #540b21;
+}
+
+.weddingPartyImages {
+  margin: 0 auto;
+  width: 90%;
+  height: 70%;
+  overflow: none;
+}
+/*
 #wedding-party img{
   border-radius: 50%;
 }
@@ -519,3 +543,4 @@ a {
   background-color: red;
 }
 
+*/

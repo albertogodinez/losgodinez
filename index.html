@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="src/js/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
-
+    <!-- PUT IN CORRECT FOLDER -->
+    <link rel="stylesheet" href="css/transitions.css">
+    <!--*************************-->
 
     <script src="src/js/modernizr.touch.js"></script>
   </head>
@@ -106,24 +107,44 @@
         </section>
 
         <section id="wedding-party">
-          	<div class="slider weddingPartyPictures">
-              <div><div class="image" onclick="weddingPartyInfo('Natalie', 'Maid of Honor', 1)"><img data-lazy="img/weddingParty/nathalie.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('Jesse', 'Best Man', 2)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 3)"><img data-lazy="img/weddingParty/audrey.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 4)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 5)"><img data-lazy="img/weddingParty/destinee.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 6)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 7)"><img data-lazy="img/weddingParty/laura.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 8)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 9)"><img data-lazy="img/weddingParty/jereny.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 10)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 11)"><img data-lazy="img/weddingParty/kass.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 12)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 13)"><img data-lazy="img/weddingParty/ivette.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 14)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Bridesmaid', 15)"><img data-lazy="img/weddingParty/priscilla.jpg"/></div></div>
-              <div><div class="image" onclick="weddingPartyInfo('name', 'Groomsmen', 16)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
-          </div><!--
+          <h2>Meet The Party</h2>
+          <div class=" weddingPartyImages Collage effect-parent">
+            <img src="img/weddingParty/nathalie.jpg">
+            <img src="img/weddingParty/jesse.jpg">
+            <img src="img/weddingParty/audrey.jpg">
+            <img src="img/weddingParty/alex.jpg">
+            <img src="img/weddingParty/destinee.jpg">
+            <img src="img/weddingParty/henry.jpg">
+            <img src="img/weddingParty/laura.jpg">
+            <img src="img/weddingParty/sean.jpg">
+            <img src="img/weddingParty/jereny.jpg">
+            <img src="img/weddingParty/dray.jpg">
+            <img src="img/weddingParty/kass.jpg">
+            <img src="img/weddingParty/phillip.jpg">
+            <img src="img/weddingParty/ivette.jpg">
+            <img src="img/weddingParty/garrett.jpg">
+            <img src="img/weddingParty/priscilla.jpg">
+            <img src="img/weddingParty/groomsmen.jpg">
+          </div>
+          	<!--<div class="slider weddingPartyPictures Collage effect-parent">
+              <div><div class="timage" onclick="weddingPartyInfo('Natalie', 'Maid of Honor', 1)"><img data-lazy="img/weddingParty/nathalie.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('Jesse', 'Best Man', 2)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 3)"><img data-lazy="img/weddingParty/audrey.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 4)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 5)"><img data-lazy="img/weddingParty/destinee.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 6)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 7)"><img data-lazy="img/weddingParty/laura.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 8)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 9)"><img data-lazy="img/weddingParty/jereny.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 10)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 11)"><img data-lazy="img/weddingParty/kass.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 12)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 13)"><img data-lazy="img/weddingParty/ivette.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 14)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Bridesmaid', 15)"><img data-lazy="img/weddingParty/priscilla.jpg"/></div></div>
+              <div><div class="timage" onclick="weddingPartyInfo('name', 'Groomsmen', 16)"><img data-lazy="img/weddingParty/groomsmen.jpg"/></div></div>
+          </div>-->
+          <!--
           <div class="wedding-party-info">
           <p >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -169,6 +190,7 @@
   <script src="src/js/bootstrap.transition.js"></script>
   <script src="src/js/jquery.progressivebg.js"></script>
   <script type="text/javascript" src="src/js/slick/slick.min.js"></script>
+  <script src="jquery.collagePlus.js"></script>
   <script src="src/js/main.js"></script>
   <script type="text/javascript">
 
@@ -203,8 +225,17 @@
               }
             ]   
         });
-    
-        $('.weddingPartyPictures').slick({
+
+        $('.Collage').collagePlus({
+                // change this to adjust the height of the rows
+                'targetHeight' : 150,
+                // change this to try different effects
+                // valid effets = effect-1 to effect-6
+                'effect' : "effect-1"
+            }
+        );
+
+        /*$('.weddingPartyPictures').slick({
             dots: true,
             speed: 300,
             slidesToShow: 3,
@@ -231,7 +262,7 @@
                 }
               }
             ]   
-        });
+        });*/
       });
   </script>
   </body>
