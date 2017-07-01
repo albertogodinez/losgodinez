@@ -5,18 +5,13 @@
       interval: false
     });
    
-	function weddingPartyInfo(name, title, index){
-		console.log('name: ' + name + "title:   " + title + '   index: ' + index);
-	}
 
     function animateInfo(action, i){
       if(action === "show"){
-        console.log("called show");
         info[i].classList.remove('hide-info');
         info[i].classList.add('show-info');
       }
       else if(action === "hide"){
-        console.log("called hide");
         info[i].classList.remove('show-info');
         info[i].classList.add('hide-info');
 
