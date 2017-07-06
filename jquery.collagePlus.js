@@ -21,7 +21,6 @@
 
 
     $.fn.collagePlus = function( options ) {
-
         return this.each(function() {
 
             /*

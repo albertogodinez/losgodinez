@@ -37,9 +37,9 @@
         // css class for the caption wrapper
         'cssClass'           : "Caption"
     };
-
     var settings = $.extend({}, defaults, options);
 
+    console.log(settings);
     return this.each(function() {
 
         /*
@@ -53,6 +53,7 @@
         // collect elements to be resized in current row
             elements    = [];
 
+              //  console.log(settings);
 
         settings.images.each(
             function(index){
@@ -69,7 +70,9 @@
                 * Do we need to do anything with captions
                 *
                 */
+               // console.log($this);
                 if (typeof $this.data("caption") == 'undefined'){
+                    console.log('got to exit');
                     return;
                 }
                 
@@ -83,6 +86,8 @@
                             settings.opacity + ';position:relative;top:0;"></div><div class="Caption_Content" style="position:relative;">' +
                             $this.data("caption") + '</div></div>';
                 $this.append(html);
+
+                console.log(html);
                 
                 /*
                 * 
