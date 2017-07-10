@@ -1,25 +1,129 @@
 
+      $(document).ready(function(){
+        $('.engagementPictures').slick({
+            dots: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+                }
+              }
+            ]   
+        });
+
+        var $images = $('.Collage');
+
+        $('.Collage').collagePlus({
+                'targetHeight' : 130,
+                'allowPartialLastRow' : true
+            }
+        );
+
+      $('img').hover(function(){
+        var yoffset = $('#wedding-party').height();
+        var height = $(this).height();
+        var width = $(this).width();
+        var coords = $(this).offset();
+        $('#caption').css('line-height', height + 'px');
+        $('#caption').html($(this).data('caption'))
+            .width(width+2)
+            .height(height+2)
+            .animate({
+                top: coords.top - (yoffset*4 -3),
+                left: coords.left -2            
+            }, 0, function(){
+                $(this).animate({
+                    opacity: 'show' 
+                });   
+            });
+      });
+
+      $('img').mouseout(function(){
+          $('#caption').animate({
+              opacity: 'hide' 
+          }, 100);   
+      });
+
+        var $weddingParty = $('#wedding-party');
+        var $infoClose = $('.infoClose');
+        var showInfo = false;
+        var friendsInfo = false;
+        var currInfo = '';
+        var $timeline = $('#carousel-inner');
+
+        $timeline.bind('click', function(event){
+          event.preventDefault();
+          if(!showInfo){
+            var href = event.target.getAttribute('href');
+            href = href.replace('#','');
+            currInfo = document.getElementById(href);
+            currInfo.classList.add('show-info');
+            showInfo = true;
+          }
+          else{
+            var currClass = event.target.getAttribute('class');
+            if(currClass.includes('info-close')){
+              currInfo.classList.remove('show-info');
+              currInfo.classList.add('hide-info');
+
+              setTimeout(function(){
+                currInfo.classList.remove('hide-info');
+              },2000);
+
+              showInfo=false;
+            }
+          }
+        });
+
+        $weddingParty.bind('click', function(event){
+          event.preventDefault();
+          if(!friendsInfo){
+            var href = event.target.getAttribute('href');
+            href = href.replace('#','');
+            currInfo = document.getElementById(href);
+            currInfo.classList.add('show-info');
+            friendsInfo = true;
+          }
+          else{
+            var currClass = event.target.getAttribute('class');
+            if(currClass.includes('info-close')){
+              currInfo.classList.remove('show-info');
+              currInfo.classList.add('hide-info');
+
+              setTimeout(function(){
+                currInfo.classList.remove('hide-info');
+              },2000);
+
+              friendsInfo=false;
+            }
+          }
+        });
+      });
+
     var viewInfoButton = document.getElementsByClassName("history-more");
     var info = document.getElementsByClassName("info");
     $('.carousel').carousel({
       interval: false
     });
    
-
-    function animateInfo(action, i){
-      if(action === "show"){
-        info[i].classList.remove('hide-info');
-        info[i].classList.add('show-info');
-      }
-      else if(action === "hide"){
-        info[i].classList.remove('show-info');
-        info[i].classList.add('hide-info');
-
-        setTimeout(function(){
-          info[i].classList.remove('hide-info');
-        },2000);
-      }
-    };
     // Init Skrollr
     var s = skrollr.init();
     s.refresh($('.homeSlide'));
@@ -39,13 +143,14 @@ $(function(){
     $('.image', '#home').progressiveBG();
 
     $('a[href^="#"]', '#navigation').on('click',function (e) {
+		console.log('hello');
 		e.preventDefault();
 		var target = this.hash,
 			$target = $(target);
 		$('html, body').stop().animate({
 			'scrollTop': $target.offset().top
 			}, 1000, function () {
-			window.location.hash = target;
+			//window.location.hash = target;
 		});
 	});
 
@@ -58,121 +163,13 @@ $(function(){
     $('#history, #gallery, #festivities-carousel').carousel({
 		interval: false
     });
-
-    $('#gallery')
-    	.on('click', function(){
-    		lazyLoad('#gallery');
-    	});
-
     $('#our-story')
     	.on('click', function(){
     		lazyLoad('#our-story');
     	});
-
-	$('#festivities')
-		.on('click', function(){
-    		lazyLoad('#festivities');
-    	})
-		.on('click', '.live-map', function(e){
-			e.preventDefault();
-			$('#festivities').children().not('iframe, .history-close').fadeOut();
-		})
-		.on('click', '.history-close', function(e){
-			e.preventDefault();
-			$('#festivities').children().not('iframe, .history-close').fadeIn();
-		});
-
-	var $bridalParty = $('#bridal-party');
-
-	$bridalParty
-		.on('click', function(){
-    		lazyLoad('#bridal-party');
-    		bgLazyLoad('.groomsmen', '#bridal-party');
-    		bgLazyLoad('.bridesmaides', '#bridal-party');
-    	})
-		.on('click', '.cover-left a', function(e){
-			e.preventDefault();
-			$('.bridesmaides', $bridalParty).show();
-			$('.groomsmen', $bridalParty).hide();
-			$('.bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
-				$(this).animate({ bottom: '-338px' }, ANIMATION_SPEED, function(){
-					$('.cover-left', $bridalParty).animate({ left: '-650px' }, ANIMATION_SPEED);
-					$('.cover-right', $bridalParty).animate({ right: '-650px' }, ANIMATION_SPEED);
-					$('.back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
-				});
-			});
-		})
-		.on('mouseover', '.cover-left a', function(e){
-			$(this).attr('class', 'heading-meet-the-bridesmaides-over');
-		})
-		.on('mouseout', '.cover-left a', function(e){
-			$(this).attr('class', 'heading-meet-the-bridesmaides');
-		})
-		.on('mouseover', '.cover-right a', function(e){
-			$(this).attr('class', 'heading-meet-the-groomsmen-over');
-		})
-		.on('mouseout', '.cover-right a', function(e){
-			$(this).attr('class', 'heading-meet-the-groomsmen');
-		})
-		.on('click', '.cover-right a', function(e){
-			e.preventDefault();
-			$('.bridesmaides', $bridalParty).hide();
-			$('.groomsmen', $bridalParty).show();
-			$('.bridal-party', $bridalParty).animate({ bottom: '-140px' }, ANIMATION_SPEED, function(){
-				$(this).animate({ bottom: '-338px' }, ANIMATION_SPEED, function(){
-					$('.cover-left', $bridalParty).animate({ left: '-650px' }, ANIMATION_SPEED);
-					$('.cover-right', $bridalParty).animate({ right: '-650px' }, ANIMATION_SPEED);
-					$('.back', $bridalParty).animate({ bottom: '-130px' }, ANIMATION_SPEED);
-				});
-			});
-		})
-		.on('click', '.back', function(e){
-			e.preventDefault();
-			$('.back', $bridalParty).animate({ bottom: '-120px' }, ANIMATION_SPEED, function(){
-				$(this).animate({ bottom: '-226px' }, ANIMATION_SPEED, function(){
-					$('.cover-left', $bridalParty).animate({ left: '0px' }, ANIMATION_SPEED);
-					$('.cover-right', $bridalParty).animate({ right: '0px' }, ANIMATION_SPEED);
-					$('.bridal-party', $bridalParty).animate({ bottom: '-150px' }, ANIMATION_SPEED, function(){
-						$('.bridesmaides, .groomsmen', $bridalParty).hide();
-					});
-				});
-			});
-		})
-		.on('click', '.control-prev', function(e){
-			e.preventDefault();
-			$(this)
-				.addClass('disabled')
-				.next()
-					.removeClass('disabled');
-
-			$('.carousel', $(this).parent()).animate({ left: '0px' }, ANIMATION_SPEED, function(){
-				$('a', $(this)).eq(0).click();
-			});
-		})
-		.on('click', '.control-next', function(e){
-			e.preventDefault();
-			$(this)
-				.addClass('disabled')
-				.prev()
-					.removeClass('disabled');
-			$('.carousel', $(this).parent()).animate({ left: '-872px' }, ANIMATION_SPEED, function(){
-				$('a', $(this)).eq(4).click();
-			});
-		})
-		.on('click', '.carousel a', function(e){
-			e.preventDefault();
-			var $link = $(this),
-				$panel = $link.closest('.panel'),
-				$active = $('.active', $link.parent());
-			$($active.attr('href')).animate({ 'margin-left': '1500px' }, ANIMATION_SPEED, function(){
-				$(this).css('margin-left', '-1500px');
-			});
-			$active.removeClass('active');
-			$link.addClass('active');
-			$($link.attr('href')).animate({ 'margin-left': '-303px'}, ANIMATION_SPEED);
-		});
 	$("img[data-original]").lazyload();
 });
+
 
 function lazyLoad(parent) {
     $('[data-original]', $(parent)).each(function(){
@@ -199,3 +196,4 @@ function bgLazyLoad(el){
 			});
     }
 }
+
