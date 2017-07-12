@@ -224,7 +224,7 @@ body {
   z-index: 3;
   margin-left: 0;
   border-bottom: 1px solid rgba(84, 11, 33, .3);
-    -webkit-background-clip: padding-box; /* for Safari */
+    -webkit-background-clip: padding-box; /* For Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
