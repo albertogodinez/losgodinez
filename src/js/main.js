@@ -61,18 +61,18 @@ $(document).ready(function(){
             .height(height+2)
             .animate({
                 top: coords.top - (yoffset*4 -3),
-                left: coords.left -2            
+                left: coords.left -2
             }, 0, function(){
                 $(this).animate({
-                    opacity: 'show' 
-                });   
+                    opacity: 'show'
+                });
             });
       });
 
       $('img').mouseout(function(){
           $('#caption').animate({
-              opacity: 'hide' 
-          }, 100);   
+              opacity: 'hide'
+          }, 100);
       });
 
         var $weddingParty = $('#wedding-party');
@@ -136,10 +136,10 @@ $(document).ready(function(){
     $('.carousel').carousel({
       interval: false
     });
-   
+
     // Init Skrollr
-    var s = skrollr.init();
-    s.refresh($('.homeSlide'));
+    // var s = skrollr.init();
+    // s.refresh($('.homeSlide'));
 
 ANIMATION_SPEED = 400;
 
@@ -147,11 +147,11 @@ $.easing.def = "easeInOutCubic";
 
 $(function(){
 
-	if(!Modernizr.touch) {
-		var skrl = skrollr.init({
-	        easing: 'sqrt'
-	    });
-	}
+	// if(!Modernizr.touch) {
+	// 	var skrl = skrollr.init({
+	//         easing: 'sqrt'
+	//     });
+	// }
 
     $('.image', '#home').progressiveBG();
 
@@ -210,4 +210,3 @@ function bgLazyLoad(el){
 			});
     }
 }
-
