@@ -1,14 +1,26 @@
 
-      $(document).ready(function(){
+
+          /*  centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true,     */ 
+$(document).ready(function(){
         $('.engagementPictures').slick({
+            variableWidth: true,
+            slidesToShow: 3,
             dots: true,
             speed: 300,
-            slidesToShow: 1,
-            centerMode: true,
-            focusOnSelect: true,
-            variableWidth: true,
-            responsive: [
+            centerPadding: '40px',
+            responsive: [{
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: '0px'
+              }
+            }
+            ]
+            /*responsive: [
               {
+              variableWidth: true,
                 breakpoint: 768,
                 settings: {
                   arrows: false,
@@ -18,15 +30,16 @@
                 }
               },
               {
+              variableWidth: true,
                 breakpoint: 480,
                 settings: {
                   arrows: false,
                   centerMode: true,
                   centerPadding: '40px',
-                  slidesToShow: 1
+                  slidesToShow: 3
                 }
               }
-            ]   
+            ]   */
         });
 
         var $images = $('.Collage');
