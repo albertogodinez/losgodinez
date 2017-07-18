@@ -374,8 +374,8 @@ gallery {
   position: relative;
   width: 100%;
 	max-height: 500px;
-  /*overflow: hidden;*/
-}
+  /*overflow: hidden;
+}*/
 /*
 .carousel-inner > .item {
   position: relative;
@@ -529,6 +529,11 @@ gallery {
   background:	#FEFDF8;
   text-align: center;
 }*/
+
+#gallery {
+  z-index: 2;
+  background: #FEFDF8;
+}
 
 .slider{
   position: absolute;
