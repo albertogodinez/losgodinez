@@ -50,6 +50,9 @@ html {
   padding: 0 !important;*/
 }
 
+[class*="col-"] {
+    margin-bottom: 15px;
+}
 /*************HOME*************/
 #home{
   position: relative;
