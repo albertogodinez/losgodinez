@@ -314,7 +314,7 @@ section {
 #navigation {
   background: #FFFFFF;
 	height: 3.1875rem;
-  opacity: .75;
+  opacity: .95;
   border-bottom: 1px solid rgba(84, 11, 33, .3);
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -332,6 +332,9 @@ section {
 
 #navigation li.active a {
   color: #fff;
+}
+.nav-link.active {
+	background-color: #F8F3ED !important;
 }
 
 .sticky.is-sticky {
