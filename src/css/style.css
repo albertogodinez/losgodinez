@@ -324,7 +324,6 @@ section {
   text-decoration: none;
   color: #540b21;
   font-size: 12px;
-  font-size: 0.85714rem;
   letter-spacing: 1px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -332,6 +331,11 @@ section {
 @media screen and (min-width: 31.25rem) {
 	#navigation a {
 	  text-transform: uppercase;
+	}
+}
+@media screen and (min-width: 46.875rem) {
+	#navigation a {
+	  font-size: 1.2rem;
 	}
 }
 
@@ -363,71 +367,6 @@ section {
   width: 55px;
   font-size: 16px;
   font-size: 20vw;
-}*/
-
-/*.carousel {
-  position: relative;
-
-}*/
-
-/*.carousel, .carousel-inner {
-  position: relative;
-  width: 100%;
-	max-height: 500px;
-  overflow: hidden;
-}*/
-/*
-.carousel-inner > .item {
-  position: relative;
-  display: none;
-  -webkit-transition: 0.6s ease-in-out left;
-  -moz-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  line-height: 1;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-
-.carousel-inner > .active {
-  left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.carousel-inner > .next {
-  left: 100%;
-}
-
-.carousel-inner > .prev {
-  left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-
-.carousel-inner > .active.left {
-  left: -100%;
-}
-
-.carousel-inner > .active.right {
-  left: 100%;
 }*/
 
 #gallery {
@@ -715,7 +654,7 @@ a.link {
 }
 
 .gift {
-    padding: 1rem 2rem 1rem 0;
+    /*padding: 1rem 2rem 1rem 0;*/
     display: inline-block;
     opacity: .4;
     transition: opacity .25s ease-in-out;
