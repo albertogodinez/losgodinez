@@ -40,14 +40,12 @@ html {
   padding-top: 0;
 }
 
-.container section {
-  overflow: hidden;
-  /**zoom: 1;*/
-  /*position: relative;
-  display: block;*/
-  /*width: 100%;*/
-  /*margin: 0 !important;
-  padding: 0 !important;*/
+#our-story,
+#wedding-party,
+#details
+{
+	padding-top: 40px;
+	margin-top: -40px;
 }
 
 [class*="col-"] {
@@ -315,41 +313,12 @@ section {
 }
 /****************NAVIGATION****************/
 #navigation {
-  position: absolute;
-  top: 1018px;
-  width: 100%;
-  /*height: 51px;
-  line-height: 51px;*/
   background: #FFFFFF;
-  opacity: .75;
-  z-index: 3;
-  /*margin-left: 0;
-  border-bottom: 1px solid rgba(84, 11, 33, .3);*/
-    -webkit-background-clip: padding-box; /* For Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-}
-
-#navigation ul {
-  overflow: hidden;
-  *zoom: 1;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-}
-
-#navigation ul li {
-  /*display: inline;*/
-  margin-right: 20px;
-}
-
-
-#navigation ul li.last {
-  margin: 0;
-}
-
-.nav-item {
-  align-items: center;
-  vertical-align: middle;
+	height: 3.1875rem;
+  /*opacity: .75;*/
+  border-bottom: 1px solid rgba(84, 11, 33, .3);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 #navigation a {
@@ -366,7 +335,18 @@ section {
   color: #fff;
 }
 
-.icn-slideshow-left {
+.sticky.is-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+	max-width: 1300px;
+}
+.stick-wrapper {
+	max-width: 1300px;
+}
+
+/*.icn-slideshow-left {
   height: 100px;
   width: 55px;
   font-size: 16px;
@@ -378,7 +358,7 @@ section {
   width: 55px;
   font-size: 16px;
   font-size: 20vw;
-}
+}*/
 
 /*.carousel {
   position: relative;
