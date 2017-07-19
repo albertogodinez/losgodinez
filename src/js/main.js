@@ -2,21 +2,32 @@
 
           /*  centerMode: true,
             focusOnSelect: true,
-            variableWidth: true,     */ 
+            variableWidth: true,     */
 $(document).ready(function(){
         $('.engagementPictures').slick({
-            variableWidth: true,
+            centerMode: true,
             slidesToShow: 3,
             dots: true,
             speed: 300,
-            centerPadding: '40px',
-            responsive: [{
-              breakpoint: 780,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '0px'
+            centerPadding: '0px',
+            responsive: [
+              {
+              breakpoint: 480,
+                settings: {
+                  centerMode: true,
+                  slidesToShow: 1,
+                  centerPadding: '0'
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '0px',
+                  slidesToShow: 2
+                }
               }
-            }
             ]
             /*responsive: [
               {
