@@ -4,7 +4,45 @@
             focusOnSelect: true,
             variableWidth: true,     */
 $(document).ready(function(){
-        $('.engagementPictures').slick({
+   //Stick navbar on scroll
+  var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+  var stickyHeight = sticky.outerHeight();
+  var stickyTop = stickyWrapper.offset().top;
+  if (scrollElement.scrollTop() >= stickyTop){
+   stickyWrapper.height(stickyHeight);
+   sticky.addClass("is-sticky");
+  } else{
+     sticky.removeClass("is-sticky");
+     stickyWrapper.height('auto');
+    }
+  };
+
+  // Find all data-toggle="sticky-onscroll" elements
+  $('[data-toggle="sticky-onscroll"]').each(function() {
+    var sticky = $(this);
+    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+    sticky.before(stickyWrapper);
+    sticky.addClass('sticky');
+
+    // Scroll & resize events
+    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+     stickyToggle(sticky, stickyWrapper, $(this));
+  });
+
+  // On page load
+  stickyToggle(sticky, stickyWrapper, $(window));
+  });
+
+  $('.engagementPictures').slick({
+      centerMode: true,
+      slidesToShow: 3,
+      dots: true,
+      speed: 300,
+      centerPadding: '0px',
+      responsive: [
+        {
+        breakpoint: 480,
+          settings: {
             centerMode: true,
             slidesToShow: 1,
             centerPadding: '0'
