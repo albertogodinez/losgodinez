@@ -33,28 +33,26 @@ $(document).ready(function(){
   stickyToggle(sticky, stickyWrapper, $(window));
   });
 
-  $('.engagementPictures').slick({
-      centerMode: true,
+  $('.engagementPictures').slick({ 
       slidesToShow: 3,
       dots: true,
       speed: 300,
-      centerPadding: '0px',
+      focusOnSelect: true,
+      variableWidth: true,
       responsive: [
         {
         breakpoint: 480,
           settings: {
-            centerMode: true,
             slidesToShow: 1,
-            centerPadding: '0'
+            centerPadding: '0px'
           }
         },
         {
           breakpoint: 768,
           settings: {
             arrows: false,
-            centerMode: true,
             centerPadding: '0px',
-            slidesToShow: 2
+            slidesToShow: 1
           }
         }
       ]

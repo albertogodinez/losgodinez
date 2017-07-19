@@ -185,8 +185,10 @@ section {
 #gallery {
 	display: block !important;
 }
+/*
 .slick-slide {
-	margin: 0 !important;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 /*
@@ -372,7 +374,10 @@ section {
 #gallery {
   z-index: 2;
   background: #FEFDF8;
+  min-height: 400px;
 }
+
+
 
 .slider{
   position: absolute;
@@ -382,9 +387,12 @@ section {
   right: 0;
   width: 100%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .slick-slide {
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -404,8 +412,19 @@ section {
 	.weddingPartyImages img {
 		max-width: 150px;
 		max-height: 150px;
-	}
+  }
+
+
+  
+  .slick-slide{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
 }
+
 
 
 #wedding-party h2{
