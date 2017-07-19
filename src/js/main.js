@@ -61,7 +61,7 @@ $(document).ready(function(){
             }
         );
 
-      $('img').hover(function(){
+      /*$('img').hover(function(){
         var yoffset = $('#wedding-party').height();
         var height = $(this).height();
         var width = $(this).width();
@@ -78,7 +78,7 @@ $(document).ready(function(){
                     opacity: 'show'
                 });
             });
-      });
+      });*/
 
       $('img').mouseout(function(){
           $('#caption').animate({
@@ -167,7 +167,6 @@ $(function(){
     $('.image', '#home').progressiveBG();
 
     $('a[href^="#"]', '#navigation').on('click',function (e) {
-		console.log('hello');
 		e.preventDefault();
 		var target = this.hash,
 			$target = $(target);
