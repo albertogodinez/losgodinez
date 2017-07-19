@@ -321,13 +321,18 @@ section {
 }
 
 #navigation a {
-  text-transform: uppercase;
   text-decoration: none;
   color: #540b21;
   font-size: 12px;
   font-size: 0.85714rem;
   letter-spacing: 1px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 31.25rem) {
+	#navigation a {
+	  text-transform: uppercase;
+	}
 }
 
 #navigation li.active a {
