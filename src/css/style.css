@@ -19,12 +19,17 @@ html {
   padding: 0px;
   overflow-x: hidden !important;
 }
-.container {
-	background-image: url('../img/background.jpg');
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: contain;
+
+strong {
+  font-weight: 600;
+  font-size: 105%;
+  color: #540b21;
+}
+
+h2{
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -36,16 +41,16 @@ html {
   padding: 0;
 }
 
-.touch .container {
-  padding-top: 0;
+.row {
+	position: relative;
 }
 
 #our-story,
 #wedding-party,
 #details
 {
-	padding-top: 40px;
-	margin-top: -40px;
+	padding-top: 50px;
+	margin-top: -50px;
 }
 
 [class*="col-"] {
@@ -53,32 +58,6 @@ html {
 }
 
 /*************HOME*************/
-/*#home{
-  position: relative;
-  max-height: 768px;
-  width: 100%;
-  z-index: 1;
-}
-
-#home .image {
-  width: 100%;
-}
-
-#home .overlay {
-  position: absolute;
-  width: 100%;
-  top: 0;
-	left:0;
-	right: 0;
-  opacity: 1;
-  z-index: 2;
-  text-align: center;
-}
-
-#home .image div {
-  z-index: 1;
-}*/
-
 .jumbotron {
 	padding: 0;
 	margin: 0;
@@ -122,58 +101,12 @@ html {
 		min-height: 100vh;
 		background-image: url('../img/initImage_1.jpg')
 	}
-
-	/*.img-mobile {
-		display: none;
-	}*/
 	.card-img-overlay{
 		margin-top: -10%;
 	}
 }
-
-/*@media screen and (min-width:950px) {
-	.jumbotron {
-		min-height: 100vh;
-		background-image: url('../img/initImage_1.jpg');
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		z-index: 3;
-	}
-	.img-mobile {
-		display: none;
-	}
-	.card-img-overlay{
-		margin-top: -10%;
-	}
-}*/
-
-
-#home h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  z-index: 2;
-  color: #fff;
-  font-family: 'Capton', sans-serif;
-}
-.bottom {
-	height: 200px;
-	background: red;
-}
-
-/*#home img{
-  position: relative;
-  left: -50%;
-  width: 100%;
-}*/
 
 /*************OUR STORY*************/
-section {
-	/*margin-bottom: 50px;*/
-}
-
 
 .carousel-item-next,
 .carousel-item-prev,
@@ -181,15 +114,14 @@ section {
 	display: block !important;
 }
 
-
-#gallery {
+/*#gallery {
 	display: block !important;
 }
-/*
+
 .slick-slide {
   margin-left: 50px;
   margin-right: 50px;
-}
+}*/
 
 /*
 #our-story .history-more {
@@ -312,10 +244,11 @@ section {
         transform: translateY(0px);
     }
 }
+
 /****************NAVIGATION****************/
 #navigation {
   background: #FFFFFF;
-	height: 3.1875rem;
+	height: 3.2rem;
   opacity: .95;
   border-bottom: 1px solid rgba(84, 11, 33, .3);
   -webkit-background-clip: padding-box;
@@ -325,7 +258,7 @@ section {
 #navigation a {
   text-decoration: none;
   color: #540b21;
-  font-size: 12px;
+  font-size: .85rem;
   letter-spacing: 1px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -372,7 +305,6 @@ section {
 }*/
 
 #gallery {
-  z-index: 2;
   background: #FEFDF8;
   min-height: 400px;
 }
@@ -400,9 +332,6 @@ section {
 /*************WEDDING PARTY*************/
 #wedding-party{
   width:100%;
-  top: 769px;
-  left: 0;
-  z-index: 2;
   background:	#FFF;
   text-align: center;
   overflow: hidden;
@@ -414,8 +343,6 @@ section {
 		max-height: 150px;
   }
 
-
-  
   .slick-slide{
     padding-left: 0px;
     padding-right: 0px;
@@ -424,43 +351,6 @@ section {
   }
 
 }
-
-
-
-#wedding-party h2{
-  color: #000000;
-  font-size: 34px;
-  padding-top: 20px;
-}
-
- /*.Collage{
-  margin: 0 auto;
-
-    padding:5px;
-    width: 85%;
-  }*/
-
-/*.Collage img{
-    border-radius: 6px;
-
-    border:1px solid black;
-    cursor: pointer;
-}*/
-
-/*#wedding-party .info {
-  z-index: 99;
-  position: absolute;
-  bottom: -800px;
-  left: 50%;
-  width: 660px;
-  height: 100%;
-  margin: 0 0 0 -330px;
-  background: #fff;
-  box-shadow: 0px 0px 25px 0px black;
-  text-align: center;
-  color: #949494;
-}*/
-
 #wedding-party .info h3 {
   margin-top: 120px;
   display: inline-block;
@@ -482,113 +372,34 @@ section {
   margin-left: 30%;
 }
 
-/*#wedding-party .info p {
-  width: 450px;
-  margin: 0 auto 10px;
-}
-
-#wedding-party .info img {
-  display: block;
-}*/
-
 /*************DETAILS*************/
-#details h2{
-  color: #000000;
-  font-size: 34px;
-  padding-top: 20px;
-}
 #details h3 {
   color: #540b21;
 }
 
 #details{
   width:100%;
-  /*top: 769px;
-  left: 0;
-  height: 769px;;*/
-  z-index: 2;
   background:	#FFFFFF;
   text-align: center;
   overflow: hidden;
 }
 
-
 #details .all-details {
-  background:	#F8F3ED;
+
 }
 
 .all-details{
+	background:	#F8F3ED;
   margin: 0 auto;
-  width: 85%;
-  /*overflow: hidden;*/
+  width: 95%;
 }
 
-/*.column {
-  position: relative;
-  width: 100%;
-  float: left;
-  text-align: left;
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem
-}*/
-
-/*.medium {
-  width: 45%;
-}*/
-
-/*******NEED TO ADD BOLD**********/
-strong {
-  font-weight: 600;
-  font-size: 105%;
-  color: #540b21;
-}
-
-.timeline {
-  max-width: 85%;
-  /*overflow: hidden;*/
-  align-items: center;
-  margin: 0 auto;
-}
-
-.timeline p {
-    margin: 0;
-    letter-spacing: 0;
-}
-
-@media screen and (min-width:64em) {
-    .timeline {
-        position: relative;
-      padding: 3rem 0
-    }
-}
-
-.small{
-  width: 15%;
-}
-
-h4 {
-    font-family: brandon-grotesque, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin: 0;
-    color: #540b21;
-}
 .time {
-  text-align: center;
-  margin: 0 auto;
-  width: 15%;
-}
-
-@media screen and (min-width:64em) {
-    .timeline p {
-        margin: 0
-    }
-}
-
-@media screen and (min-width:64em) {
-    .time img {
-        margin-bottom: 1.25rem
-    }
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+  color: #540b21;
 }
 
 /*******LINKS AND ANCHORS*******/
@@ -598,11 +409,12 @@ a {
 
 a:active,
 a:hover {
-    outline: 0
+  outline: 0;
+	color: #000;
 }
 
 a {
-    color: #333
+  color: #333
 }
 
 a,
@@ -638,17 +450,17 @@ a.link {
     transition: width .5s ease;
 }
 @media (hover) {
-    /* styles for when the user can hover */
-		.link:hover:before {
-		    width: 100%;
-		    background: #540b21;
-		    transition: width .5s ease;
-		}
-		.link:hover:after {
-		    width: 100%;
-		    background: transparent;
-		    transition: all 0s ease;
-		}
+  /* styles for when the user can hover */
+	.link:hover:before {
+	    width: 100%;
+	    background: #540b21;
+	    transition: width .5s ease;
+	}
+	.link:hover:after {
+	    width: 100%;
+	    background: transparent;
+	    transition: all 0s ease;
+	}
 }
 
 .location,
@@ -657,39 +469,25 @@ a.link {
 }
 
 /****************REGISTRY****************/
-#registry h2{
-  color: #000000;
-  font-size: 34px;
-  padding-top: 20px;
-}
 
 #registry{
   width:100%;
   left: 0;
-  z-index: 2;
   background:	#FEFDF8;
   text-align: center;
-  overflow: hidden;
 }
 
 .gift {
-    /*padding: 1rem 2rem 1rem 0;*/
-    display: inline-block;
-    opacity: .4;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out
+  opacity: .4;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
 }
 
-@media screen and (min-width:64em) {
+@media (hover) {
     .gift:hover {
         opacity: 1
-    }
-}
-
-@media screen and (max-width:39.9375em) {
-    .gift img {
-        width: 85%
     }
 }
 
@@ -882,9 +680,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .row {
-    position: relative;
-  }
+
   .bottom-align-text {
     position: absolute;
     bottom: 0;
