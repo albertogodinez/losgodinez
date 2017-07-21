@@ -115,11 +115,10 @@ $('img').mouseout(function(){
 
   var $weddingParty = $('#wedding-party');
   var $infoClose = $('.infoClose');
-  var showInfo = false;
   var friendsInfo = false;
   var currInfo = '';
-  var $timeline = $('#carousel-inner');
-
+  /*var $timeline = $('#carousel-inner');
+/*
   $timeline.bind('click', function(event){
     event.preventDefault();
     if(!showInfo){
@@ -142,18 +141,28 @@ $('img').mouseout(function(){
         showInfo=false;
       }
     }
+  });*/
+
+  $("#show-info").click(function() {
+    var href = event.target.getAttribute('data-target');
+    $(href).modal('show');
+
   });
 
   $weddingParty.bind('click', function(event){
+
     event.preventDefault();
-    if(!friendsInfo){
-      var href = event.target.getAttribute('href');
-      href = href.replace('#','');
-      currInfo = document.getElementById(href);
+   // if(!friendsInfo){
+      var href = event.target.getAttribute('data-target');
+      //href = href.replace('#','');
+      //href = '#'+href;
+      $(href).modal('show');
+      //document.getElementById('#maidOfHonor').showModal();
+      /*currInfo = document.getElementById(href);
       currInfo.classList.add('show-info');
-      friendsInfo = true;
-    }
-    else{
+      friendsInfo = true;*/
+    //}
+    /*else{
       var currClass = event.target.getAttribute('class');
       if(currClass.includes('info-close')){
         currInfo.classList.remove('show-info');
@@ -165,7 +174,7 @@ $('img').mouseout(function(){
 
         friendsInfo=false;
       }
-    }
+    }*/
   });
 });
 

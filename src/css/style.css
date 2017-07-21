@@ -123,7 +123,7 @@ h2{
   margin-right: 50px;
 }*/
 
-/*
+*/
 #our-story .history-more {
   height: 64px;
   width: 128px;
@@ -134,7 +134,7 @@ h2{
   display: inline-block;
   position: absolute;
   border: 3px solid #FFF;
-  color: #FFF;
+  color: #FFF !important;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 18px;
@@ -150,11 +150,11 @@ h2{
 }
 
 .history-more:hover {
-    color: #540b21;
+    color: #540b21 !important;
     border:3px solid #540b21;
 
 }
-
+/*
 #our-story .info {
   position: absolute;
   bottom: -790px;
@@ -210,7 +210,7 @@ h2{
   padding: 0;
 }*/
 
-/****************ANIMATIONS****************/
+/****************ANIMATIONS****************
 .show-info{
   animation: show-info-animation 1.0s forwards cubic-bezier(.65,-0.02,.72,.29);
   -webkit-animation: show-info-animation 1.0s forwards cubic-bezier(.65,-0.02,.72,.29);
@@ -351,27 +351,82 @@ h2{
   }
 
 }
+<<<<<<< HEAD
 #wedding-party .info h3 {
   margin-top: 120px;
+=======
+
+
+
+#wedding-party h2{
+  color: #000000;
+  font-size: 34px;
+  padding-top: 20px;
+}
+
+ /*.Collage{
+  margin: 0 auto;
+
+    padding:5px;
+    width: 85%;
+  }*/
+
+/*.Collage img{
+    border-radius: 6px;
+
+    border:1px solid black;
+    cursor: pointer;
+}*/
+
+.modal.custom .modal-dialog {
+  box-shadow: 0px 0px 25px 0px black;
+  text-align: center;
+  color: #949494;
+}
+
+.modal.custom .modal-dialog .modal-header {
+>>>>>>> 6802a86062114eda41bc243ccd3f00322dd78159
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #000000;
+  text-align: center;
 }
 
-#wedding-party .info h3 small {
+.modal.custom .modal-dialog h3 small {
   display: block;
   margin-top: 1px;
   font-size: 11px;
   font-size: 0.78571rem;
   color: #540b21;
 }
-
-.ie7 #wedding-party .info h3 {
+/*
+.ie7 .modal.custom .modal-dialog h3 {
   display: block;
   margin-left: 30%;
 }
+<<<<<<< HEAD
 
+=======
+/*
+.modal.custom .modal-dialog  {
+  width: 450px;
+  margin: 0 auto 10px;
+}
+*/
+.modal.custom .modal-dialog img {
+  display: block;
+}
+
+.modal.custom .modal-dialog .link {
+  margin-bottom: 15px;
+
+}
+
+.modal.custom .modal-dialog .col-12 {
+  text-align: center;
+}
+>>>>>>> 6802a86062114eda41bc243ccd3f00322dd78159
 /*************DETAILS*************/
 #details h3 {
   color: #540b21;
@@ -657,6 +712,7 @@ footer {
   opacity: 0;
   transition: .5s ease;
   background-color: black;
+  pointer-events: none;
 }
 
 .img-container:hover .overlay {
