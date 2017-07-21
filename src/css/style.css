@@ -191,7 +191,7 @@ section {
   margin-right: 50px;
 }
 
-/*
+*/
 #our-story .history-more {
   height: 64px;
   width: 128px;
@@ -202,7 +202,7 @@ section {
   display: inline-block;
   position: absolute;
   border: 3px solid #FFF;
-  color: #FFF;
+  color: #FFF !important;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 18px;
@@ -218,11 +218,11 @@ section {
 }
 
 .history-more:hover {
-    color: #540b21;
+    color: #540b21 !important;
     border:3px solid #540b21;
 
 }
-
+/*
 #our-story .info {
   position: absolute;
   bottom: -790px;
@@ -278,7 +278,7 @@ section {
   padding: 0;
 }*/
 
-/****************ANIMATIONS****************/
+/****************ANIMATIONS****************
 .show-info{
   animation: show-info-animation 1.0s forwards cubic-bezier(.65,-0.02,.72,.29);
   -webkit-animation: show-info-animation 1.0s forwards cubic-bezier(.65,-0.02,.72,.29);
@@ -447,50 +447,50 @@ section {
     cursor: pointer;
 }*/
 
-/*#wedding-party .info {
-  z-index: 99;
-  position: absolute;
-  bottom: -800px;
-  left: 50%;
-  width: 660px;
-  height: 100%;
-  margin: 0 0 0 -330px;
-  background: #fff;
+.modal.custom .modal-dialog {
   box-shadow: 0px 0px 25px 0px black;
   text-align: center;
   color: #949494;
-}*/
+}
 
-#wedding-party .info h3 {
-  margin-top: 120px;
+.modal.custom .modal-dialog .modal-header {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #000000;
+  text-align: center;
 }
 
-#wedding-party .info h3 small {
+.modal.custom .modal-dialog h3 small {
   display: block;
   margin-top: 1px;
   font-size: 11px;
   font-size: 0.78571rem;
   color: #540b21;
 }
-
-.ie7 #wedding-party .info h3 {
+/*
+.ie7 .modal.custom .modal-dialog h3 {
   display: block;
   margin-left: 30%;
 }
-
-/*#wedding-party .info p {
+/*
+.modal.custom .modal-dialog  {
   width: 450px;
   margin: 0 auto 10px;
 }
-
-#wedding-party .info img {
+*/
+.modal.custom .modal-dialog img {
   display: block;
-}*/
+}
 
+.modal.custom .modal-dialog .link {
+  margin-bottom: 15px;
+
+}
+
+.modal.custom .modal-dialog .col-12 {
+  text-align: center;
+}
 /*************DETAILS*************/
 #details h2{
   color: #000000;
@@ -859,6 +859,7 @@ footer {
   opacity: 0;
   transition: .5s ease;
   background-color: black;
+  pointer-events: none;
 }
 
 .img-container:hover .overlay {
