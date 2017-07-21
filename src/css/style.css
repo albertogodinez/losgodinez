@@ -351,12 +351,9 @@ h2{
   }
 
 }
-<<<<<<< HEAD
 #wedding-party .info h3 {
   margin-top: 120px;
-=======
-
-
+}
 
 #wedding-party h2{
   color: #000000;
@@ -385,7 +382,6 @@ h2{
 }
 
 .modal.custom .modal-dialog .modal-header {
->>>>>>> 6802a86062114eda41bc243ccd3f00322dd78159
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -405,9 +401,7 @@ h2{
   display: block;
   margin-left: 30%;
 }
-<<<<<<< HEAD
 
-=======
 /*
 .modal.custom .modal-dialog  {
   width: 450px;
@@ -426,7 +420,7 @@ h2{
 .modal.custom .modal-dialog .col-12 {
   text-align: center;
 }
->>>>>>> 6802a86062114eda41bc243ccd3f00322dd78159
+
 /*************DETAILS*************/
 #details h3 {
   color: #540b21;
