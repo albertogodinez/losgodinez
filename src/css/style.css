@@ -19,7 +19,12 @@ html {
   padding: 0px;
   overflow-x: hidden !important;
 }
-
+@media screen and (min-width: 47.9376rem) {
+	body {
+		font-size: 1.2rem;
+  	line-height: 1.5;
+	}
+}
 strong {
   font-weight: 600;
   font-size: 105%;
@@ -123,7 +128,6 @@ h2{
   margin-right: 50px;
 }*/
 
-*/
 #our-story .history-more {
   height: 64px;
   width: 128px;
@@ -258,7 +262,7 @@ h2{
 #navigation a {
   text-decoration: none;
   color: #540b21;
-  font-size: .85rem;
+  font-size: .75rem;
   letter-spacing: 1px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -528,6 +532,7 @@ a.link {
 
 .gift {
   opacity: .4;
+	margin-left: 0;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
@@ -538,6 +543,43 @@ a.link {
     .gift:hover {
         opacity: 1
     }
+}
+
+.gifts {
+  position: relative;
+  left: 0;
+  -webkit-animation: slideIn 2s forwards;
+  -moz-animation: slideIn 2s forwards;
+  animation: slideIn 2s forwards;
+}
+@media screen and (min-width: 35.9374rem) {
+	.gifts {
+		text-align: left;
+	}
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /****************SHARE****************/
