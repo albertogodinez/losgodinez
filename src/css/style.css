@@ -545,48 +545,16 @@ a.link {
     }
 }
 
-.gifts {
-  position: relative;
-  left: 0;
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
-}
 @media screen and (min-width: 35.9374rem) {
 	.gifts {
 		text-align: left;
 	}
-}
-@-webkit-keyframes slideIn {
-  0% {
-    transform: translateX(-700px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slideIn {
-  0% {
-    transform: translateX(-700px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(-700px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 /****************SHARE****************/
 #share{
   top: 769px;
   left: 0;
-  /*height: 100%;*/
   z-index: 2;
   background:	#FFF;
   text-align: center;
@@ -598,7 +566,6 @@ a.link {
   border-image: linear-gradient(to right, #f8f8f8 0%, black 50%, #f8f8f8 100%) ;
   border-image-slice: 1;
 }
-
 
 .social-media {
   padding-top: 30px;
@@ -765,13 +732,10 @@ footer {
   -ms-transform: translate(-50%, -50%);
 }
 
-
-/*******MEDIA QUERIES*********/
 @media screen and (min-width:992px) {
   .location .link {
     margin-bottom: 0;
   }
-
 
   .bottom-align-text {
     position: absolute;

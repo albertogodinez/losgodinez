@@ -4,6 +4,10 @@
             focusOnSelect: true,
             variableWidth: true,     */
 $(document).ready(function(){
+
+  // Init Skrollr
+  var s = skrollr.init();
+  
    //Stick navbar on scroll
   var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
   var stickyHeight = sticky.outerHeight();
@@ -33,7 +37,7 @@ $(document).ready(function(){
   stickyToggle(sticky, stickyWrapper, $(window));
   });
 
-  $('.engagementPictures').slick({ 
+  $('.engagementPictures').slick({
       slidesToShow: 3,
       dots: true,
       speed: 300,
@@ -56,28 +60,6 @@ $(document).ready(function(){
           }
         }
       ]
-      /*responsive: [
-        {
-        variableWidth: true,
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-        variableWidth: true,
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        }
-      ]   */
   });
 
   var $images = $('.Collage');
@@ -184,8 +166,7 @@ $('img').mouseout(function(){
     interval: false
 });
 
-    // Init Skrollr
-    // var s = skrollr.init();
+
     // s.refresh($('.homeSlide'));
 
 ANIMATION_SPEED = 400;
