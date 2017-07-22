@@ -81,9 +81,9 @@ $(document).ready(function(){
 
   var viewInfoButton = document.getElementsByClassName("history-more");
   var info = document.getElementsByClassName("info");
-  $('.carousel').carousel({
+  /*$('.carousel').carousel({
     interval: false
-});
+});*/
 
 ANIMATION_SPEED = 400;
 
@@ -109,11 +109,11 @@ $(function(){
 		bgLazyLoad($(this).find('a').attr('href'));
 	});
 
-    $('#history, #gallery, #festivities-carousel').carousel({
+    /*$('#history, #gallery, #festivities-carousel').carousel({
 		interval: false
     });
     $('#our-story')
     	.on('click', function(){
     		lazyLoad('#our-story');
-    	});
+    	});*/
 });
