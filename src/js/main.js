@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+  // Init Skrollr
+  var s = skrollr.init();
+  
    //Stick navbar on scroll
   var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
   var stickyHeight = sticky.outerHeight();
@@ -28,7 +32,7 @@ $(document).ready(function(){
   stickyToggle(sticky, stickyWrapper, $(window));
   });
 
-  $('.engagementPictures').slick({ 
+  $('.engagementPictures').slick({
       slidesToShow: 3,
       dots: true,
       speed: 300,
