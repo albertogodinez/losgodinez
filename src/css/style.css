@@ -15,6 +15,14 @@ body	{
     height: 60%; 
 }
 
+.modal-dialog {
+  height: 60%;
+} 
+
+.modal-content {
+  height: 100%;
+}
+
 .modal-body { 
     max-height: 350px; 
     padding: 15px; 
@@ -311,13 +319,13 @@ h2{
   cursor: pointer;
 }
 
-.modal.custom .modal-dialog {
+.custom .modal-dialog {
   box-shadow: 0px 0px 25px 0px black;
   text-align: center;
   color: #949494;
 }
 
-.modal.custom .modal-dialog .modal-header {
+.modal-header {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -325,7 +333,7 @@ h2{
   text-align: center;
 }
 
-.modal.custom .modal-dialog h3 small {
+.custom h3 small {
   display: block;
   margin-top: 1px;
   font-size: 11px;
@@ -333,16 +341,16 @@ h2{
   color: #540b21;
 }
 
-.modal.custom .modal-dialog img {
+.custom img {
   display: block;
 }
 
-.modal.custom .modal-dialog .link {
+.custom.link {
   margin-bottom: 15px;
 
 }
 
-.modal.custom .modal-dialog .col-12 {
+.custom.col-12 {
   text-align: center;
 }
 
@@ -356,10 +364,6 @@ h2{
   background:	#FFFFFF;
   text-align: center;
   overflow: hidden;
-}
-
-#details .all-details {
-
 }
 
 .all-details{
@@ -451,6 +455,10 @@ a.link {
   text-align: center;
 }
 
+.medium{
+  width: 100%;
+}
+
 .gift {
   opacity: .4;
 	margin-left: 0;
@@ -505,66 +513,125 @@ a.link {
   width: 30px;
 }
 
-#share img:hover,
-.drum:hover {
-    -webkit-animation: b .82s cubic-bezier(.36, .07, .19, .97) both;
-    animation: b .82s cubic-bezier(.36, .07, .19, .97) both;
+.drum {
+    -webkit-animation: drum 5s cubic-bezier(.36, .07, .19, .97) both infinite;
+    animation: drum 5s cubic-bezier(.36, .07, .19, .97) both infinite;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
-    perspective: 1000px
+    perspective: 1000px;
+}
+
+#share img {
+    -webkit-animation: b 5s cubic-bezier(.36, .07, .19, .97) both infinite;
+    animation: b 5s cubic-bezier(.36, .07, .19, .97) both infinite;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
 }
 
 
 @-webkit-keyframes b {
-    10%,
-    90% {
+    2%,
+    18% {
         -webkit-transform: translate3d(-1px, 0, 0);
         transform: translate3d(-1px, 0, 0)
     }
-    20%,
-    80% {
+    4%,
+    16% {
         -webkit-transform: translate3d(1px, 0, 0);
         transform: translate3d(1px, 0, 0)
     }
-    30%,
-    50%,
-    70% {
+    6%,
+    10%,
+    14% {
         -webkit-transform: translate3d(-1px, 0, 0);
         transform: translate3d(-1px, 0, 0)
     }
-    40%,
-    60% {
+    8%,
+    12% {
         -webkit-transform: translate3d(1px, 0, 0);
         transform: translate3d(1px, 0, 0)
     }
 }
 
 @keyframes b {
-    10%,
-    90% {
+    2%,
+    18% {
         -webkit-transform: translate3d(-1px, 0, 0);
         transform: translate3d(-1px, 0, 0)
     }
-    20%,
-    80% {
+    4%,
+    16% {
         -webkit-transform: translate3d(1px, 0, 0);
         transform: translate3d(1px, 0, 0)
     }
-    30%,
-    50%,
-    70% {
+    6%,
+    10%,
+    14% {
         -webkit-transform: translate3d(-1px, 0, 0);
         transform: translate3d(-1px, 0, 0)
     }
-    40%,
-    60% {
+    8%,
+    12% {
         -webkit-transform: translate3d(1px, 0, 0);
         transform: translate3d(1px, 0, 0)
     }
 }
+
+@-webkit-keyframes drum {
+    52%,
+    68% {
+        -webkit-transform: translate3d(-1px, 0, 0);
+        transform: translate3d(-1px, 0, 0)
+    }
+    54%,
+    66% {
+        -webkit-transform: translate3d(1px, 0, 0);
+        transform: translate3d(1px, 0, 0)
+    }
+    56%,
+    60%,
+    64% {
+        -webkit-transform: translate3d(-1px, 0, 0);
+        transform: translate3d(-1px, 0, 0)
+    }
+    58%,
+    62% {
+        -webkit-transform: translate3d(1px, 0, 0);
+        transform: translate3d(1px, 0, 0)
+    }
+}
+
+@keyframes drum {
+    52%,
+    68% {
+        -webkit-transform: translate3d(-1px, 0, 0);
+        transform: translate3d(-1px, 0, 0)
+    }
+    54%,
+    66% {
+        -webkit-transform: translate3d(1px, 0, 0);
+        transform: translate3d(1px, 0, 0)
+    }
+    56%,
+    60%,
+    64% {
+        -webkit-transform: translate3d(-1px, 0, 0);
+        transform: translate3d(-1px, 0, 0)
+    }
+    58%,
+    62% {
+        -webkit-transform: translate3d(1px, 0, 0);
+        transform: translate3d(1px, 0, 0)
+    }
+}
+
 .temp {
   top: 769px;
   left: 0;
@@ -679,14 +746,10 @@ a.link {
     bottom: 15px;
     display: inherit;
   }
-/*
-  .middle-footer{
-    display: none;
-  }
 
-  .right-footer {
-    display: inherit;
-  }*/
+.medium{
+  width: 47%;
+}
 
   .slick-dots {
     visibility:  visible;
