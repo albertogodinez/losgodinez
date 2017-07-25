@@ -44,7 +44,8 @@ $(document).ready(function(){
           settings: {
             centerMode: true,
             slidesToShow: 1,
-            centerPadding: '0px'
+            centerPadding: '0px',
+            autoplay: true
           }
         },
         {

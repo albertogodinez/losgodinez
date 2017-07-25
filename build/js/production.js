@@ -105,7 +105,8 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
           settings: {
             centerMode: true,
             slidesToShow: 1,
-            centerPadding: '0px'
+            centerPadding: '0px',
+            autoplay: true
           }
         },
         {

@@ -148,8 +148,9 @@ h2{
   text-align: center;
   cursor: pointer;
   left: 50%;
+  top: 10%;
+
   margin-left: -34px;
-  top: 125px;
 }
 
 .history-more:hover {
@@ -252,6 +253,29 @@ h2{
     margin-right: 0px;
   }
 
+#our-story .history-more {
+  height: 48px;
+  width: 88px;
+  line-height: 48px;
+}
+
+.history-more {
+  display: inline-block;
+  position: absolute;
+  border: 2px solid #FFF;
+  color: #FFF !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 10px;
+  border-radius: 2px;
+  font-family: 'Capton', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  left: 50%;
+  top: 5%;
+}
   
 }
 #wedding-party .info h3 {
@@ -547,10 +571,16 @@ a.link {
   text-decoration: underline;
 }
 
+.middle-footer {
+    bottom: 5px !important;
+    display: inherit;
+
+}
+/*
 .right-footer {
   display: none;
 }
-
+*/
 .text-left {
   text-align: left;
   left: 25px;
@@ -627,14 +657,14 @@ a.link {
     bottom: 15px;
     display: inherit;
   }
-
+/*
   .middle-footer{
     display: none;
   }
 
   .right-footer {
     display: inherit;
-  }
+  }*/
 
   .slick-dots {
     visibility:  visible;
