@@ -664,7 +664,6 @@ a.link {
 .middle-footer {
     bottom: 5px !important;
     display: inherit;
-
 }
 /*
 .right-footer {
@@ -760,5 +759,8 @@ a.link {
   .slick-dots {
     visibility:  visible;
   }
+  .middle-footer {
+    padding-left: 100px;
+}
 
 }
