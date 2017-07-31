@@ -12,11 +12,11 @@ body	{
     margin: 0; 
 }
 .modal-body { 
-    height: 60%; 
+    height: 70%; 
 }
 
 .modal-dialog {
-  height: 60%;
+  height: 70%;
 } 
 
 .modal-content {
@@ -24,7 +24,7 @@ body	{
 }
 
 .modal-body { 
-    max-height: 350px; 
+    max-height: 450px; 
     padding: 15px; 
     overflow-y: auto; 
     -webkit-overflow-scrolling: touch; 
@@ -277,8 +277,8 @@ h2{
   .slick-slide{
     padding-left: 0px;
     padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
 #our-story .history-more {

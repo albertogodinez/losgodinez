@@ -93,6 +93,7 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
   stickyToggle(sticky, stickyWrapper, $(window));
   });
 
+  var autoValue = true;
   $('.engagementPictures').slick({
       slidesToShow: 3,
       dots: true,
@@ -121,7 +122,11 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
       ]
   });
 
-    $('.slick-dots li').first().click();
+  $('.slick-dots li').first().click();
+  $('.slick-track').on('click',function(){
+    console.log('clicked');
+      $('.engagementPictures').slick('slickPause');
+  });
 
   var $weddingParty = $('#wedding-party');
   var $infoClose = $('.infoClose');

@@ -32,6 +32,7 @@ $(document).ready(function(){
   stickyToggle(sticky, stickyWrapper, $(window));
   });
 
+  var autoValue = true;
   $('.engagementPictures').slick({
       slidesToShow: 3,
       dots: true,
@@ -60,7 +61,11 @@ $(document).ready(function(){
       ]
   });
 
-    $('.slick-dots li').first().click();
+  $('.slick-dots li').first().click();
+  $('.slick-track').on('click',function(){
+    console.log('clicked');
+      $('.engagementPictures').slick('slickPause');
+  });
 
   var $weddingParty = $('#wedding-party');
   var $infoClose = $('.infoClose');
