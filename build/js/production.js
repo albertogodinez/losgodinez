@@ -124,7 +124,6 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
 
   $('.slick-dots li').first().click();
   $('.slick-track').on('click',function(){
-    console.log('clicked');
       $('.engagementPictures').slick('slickPause');
   });
 
